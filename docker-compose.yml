@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped
+    tty: true
+    env_file:
+      - .env
